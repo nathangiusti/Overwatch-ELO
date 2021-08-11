@@ -39,6 +39,7 @@ LOSING_TEAM_COL = 5
 LOSE_SCORE_COL = 6
 DATE_COL = 7
 
+
 def calculate_elo(winning_team_rating, losing_team_rating, margin):
     e1 = winning_team_rating/(winning_team_rating + losing_team_rating)
     e2 = losing_team_rating/(winning_team_rating + losing_team_rating)

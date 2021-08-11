@@ -14,7 +14,7 @@ def main():
     sheet = service.pages['Sheet1']
 
     file1 = open('input.txt', 'r')
-    stage = "WEEK 32"
+    stage = "WEEK 17"
     sheet_rows = []
     while True:
         line = file1.readline()

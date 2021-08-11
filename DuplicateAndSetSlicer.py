@@ -5,7 +5,7 @@ import Report
 # This script uses PowerPy to programatically duplicate sections.
 
 TEAM_LIST_ARR = [
-    #'ATLANTA REIGN',
+    'ATLANTA REIGN',
     'BOSTON UPRISING',
     'CHENGDU HUNTERS',
     'DALLAS FUEL',
@@ -29,13 +29,13 @@ TEAM_LIST_ARR = [
 
 
 def main():
-    report = Report.Report('PBIX/OWL ELO.pbix')
+    report = Report.Report('OWL ELO.pbix')
     section = report.get_sections()[1]
     for team in TEAM_LIST_ARR:
         dupe_section = report.duplicate_section(section, team)
         slicer = dupe_section.get_visuals_by_type('slicer')[1]
         slicer.set_slicer_value(team)
-    report.publish_pbix('PBIX/MyNewPBIX.pbix')
+    report.publish_pbix('MyNewPBIX.pbix')
 
 
 if __name__ == "__main__":
